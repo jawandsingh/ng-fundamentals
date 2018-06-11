@@ -7,7 +7,11 @@
     <!--#thumbnail this is a pointer to our child component. by using this 
         we can access any property or method from child component-->
         <!--#thumbnail-->
-    <event-thumbnail  [event]="event1"></event-thumbnail>
+        <div class="row">
+            <div *ngFor="let eventObj of events" class="col-md-5">
+                  <event-thumbnail [event]="eventObj"></event-thumbnail>
+            </div>            
+        </div>
     <!-- <h3>{{thumbnail.someProperty}}</h3> -->
     <!-- <button class="btn btn-primary" (click)="thumbnail.logFoo()">Log some foo</button> -->
 </div>
