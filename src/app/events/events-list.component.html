@@ -9,7 +9,7 @@
         <!--#thumbnail-->
         <div class="row">
             <div *ngFor="let eventObj of events" class="col-md-5">
-                  <event-thumbnail [event]="eventObj"></event-thumbnail>
+                  <event-thumbnail (click)="handleThumbnailClicked(eventObj.name)" [event]="eventObj"></event-thumbnail>
             </div>            
         </div>
     <!-- <h3>{{thumbnail.someProperty}}</h3> -->
